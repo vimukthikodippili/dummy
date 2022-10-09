@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 @AllArgsConstructor
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class RequestProductDto {
     private int code;
     private boolean conditions;
-    private double values;
+    private ArrayList productValues;
     private Types types;
     private ArrayList validators;
     private String label;

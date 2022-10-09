@@ -1,5 +1,5 @@
 package com.example.demo.enums;
 
 public enum Types {
-    text,checkbox,radioButton,textArea
+    text,checkbox,radio,textArea,select
 }

@@ -8,6 +8,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -27,20 +28,15 @@ public class Products {
     @Column(name = "code", columnDefinition = "INT", nullable = false)
     private int code;
 
-    @Column(name = "conditions", nullable = false, columnDefinition = "TINYINT")
-    @NotNull(message = "active state Type is mandatory")
-    private boolean conditions;
 
-    @Column(name = "value",columnDefinition = "DOUBLE")
-    @NotNull(message = "Hourly cost is required")
-    private double values;
-
-    @Column(name = "type",columnDefinition = "VARCHAR(45)")
-    @NotNull(message = "ExtraState is required")
-    @Enumerated(EnumType.STRING)
-    private Types types;
 
     @Type(type = "json")
+    @Column(columnDefinition = "json")
+    private ArrayList productValues;
+
+
+
+   @Type(type = "json")
     @Column(columnDefinition = "json")
     private ArrayList validators;
 
@@ -49,6 +45,12 @@ public class Products {
 
     @OneToMany(mappedBy="product")
     private Set<Brands> brands;
+
+    @OneToOne(mappedBy = "products")
+    private Conditon conditon;
+
+    @OneToOne(mappedBy = "products")
+    private Edition edition;
 
 
 

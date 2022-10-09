@@ -15,16 +15,13 @@ import javax.persistence.Table;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-@Table(name = "catagory")
+@Table(name = "models")
 @TypeDef(name = "json", typeClass = JsonStringType.class)
-public class Catagory {
+public class Models {
     @Id
-    @Column(length = 45, name = "catagory_id")
-    private String catagoryId;
+    @Column(length = 45, name = "model_id")
+    private String modelId;
 
-    @Column(length = 45, name = "catagory_name")
-    private String catagoryName;
-
-
-
+    @Column(length = 45, name = "models")
+    private String models;
 }

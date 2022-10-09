@@ -11,6 +11,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 @Data
 @AllArgsConstructor
@@ -20,12 +21,9 @@ public class ProductDto {
 
     private String productId;
     private int code;
-    private boolean conditions;
-    private double values;
-    private Types types;
+    private ArrayList productValues;
     private ArrayList validators;
     private String label;
-
 
 
 
