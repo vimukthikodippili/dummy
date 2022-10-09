@@ -12,9 +12,9 @@ import java.util.List;
 public interface ProductMapper {
     Products toProduct(ProductDto productDto);
 
-   // List<ResponseProductDto> toResponseProductDtoList(List<ProductInterface> getAll);
+    List<ResponseProductDto> toResponseProductDtoList(List<ProductInterface> getAll);
 
     ProductDto toProductDto(Products products);
 
-    List<ResponseProductDto> toResponseProductDtoList1(List<ProductInterface> getAll);
+    //List<ResponseProductDto> toResponseProductDtoList1(List<ProductInterface> getAll);
 }

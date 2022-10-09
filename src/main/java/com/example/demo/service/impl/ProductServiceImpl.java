@@ -54,6 +54,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ResponseProductDto> getAllProduct(String searchText) {
         List<ProductInterface> getAll = productRepo.getAllProduct(searchText);
-        return productMapper.toResponseProductDtoList1(getAll);
+        return productMapper.toResponseProductDtoList(getAll);
     }
 }

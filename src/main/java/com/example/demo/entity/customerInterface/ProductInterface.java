@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public interface ProductInterface {
      String getProductId();
-   Double getConditions();
+   Integer getConditions();
      Double getValuess();
      Types getTypes();
     ArrayList getValidators();
      String getLabel();
     String getBrandLabel();
-     Byte getRequired();
+     Integer getRequired();
      String getToolTip();
     Integer getCode();
 }
